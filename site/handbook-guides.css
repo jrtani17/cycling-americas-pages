@@ -1,0 +1,57 @@
+/* Detailed field-handbook presentation for country and ride guides. */
+.handbook-layout main{min-width:0}
+.handbook-quick{padding:0 0 28px;border-bottom:1px solid var(--line);scroll-margin-top:120px}
+.handbook-quick-head h2,.handbook-part-head h2{margin:4px 0 6px;color:#113b59}
+.handbook-quick-head p,.handbook-part-head p{max-width:72ch;margin:0;color:#53665d;line-height:1.55}
+.handbook-quick-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:18px}
+.handbook-quick-card{min-height:78px;padding:13px 14px;border:1px solid #c7d8e1;border-radius:11px;background:#f2f8fb}
+.handbook-quick-card span{display:block;color:#376780;font-size:12px;font-weight:760;letter-spacing:.035em;text-transform:uppercase}
+.handbook-quick-card b{display:block;margin-top:6px;color:#153d5b;font-size:18px;line-height:1.2}
+.handbook-topic-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.handbook-topic-links a{display:flex;gap:7px;align-items:baseline;padding:8px 10px;border:1px solid #cbd9d0;border-radius:999px;background:#fff;color:#275a48;font-size:13px;text-decoration:none}
+.handbook-topic-links a:hover{border-color:#4d8170;background:#f3f8f5}
+.handbook-topic-links b{font-weight:600;color:#607469}
+.handbook-part{margin-top:38px;scroll-margin-top:120px}
+.handbook-part-head{padding:15px 18px 17px;border-radius:13px 13px 0 0;background:#103b59;color:#fff}
+.handbook-part-head .eyebrow{color:#bdd8e7}
+.handbook-part-head h2{color:#fff;font-size:27px}
+.handbook-part-head p{color:#e0edf3}
+.handbook-topic{padding:27px 0;border-bottom:1px solid var(--line);scroll-margin-top:132px}
+.handbook-topic:last-child{border-bottom:0}
+.handbook-topic-head{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:15px}
+.handbook-topic-head h3{margin:3px 0 0;color:#173f2e;font-family:Georgia,serif;font-size:26px;line-height:1.1}
+.handbook-topic-head .meta{padding-bottom:3px;white-space:nowrap}
+.handbook-topic-intro{max-width:72ch;margin:0 0 18px;color:#587087;font-size:14px;line-height:1.5}
+.handbook-subsection{margin-top:18px}
+.handbook-subhead{margin:0 0 10px;color:#216884;font-size:12px;font-weight:820;letter-spacing:.075em;text-transform:uppercase}
+.handbook-entry-list{display:grid;gap:12px}
+.handbook-entry{padding:15px 17px;border-left:4px solid #3b96b1;border-radius:0 12px 12px 0;background:#f0f7fa}
+.handbook-entry:hover{background:#eaf4f8}
+.handbook-entry-kicker{margin-bottom:5px;color:#216f8c;font-size:11px;font-weight:800;letter-spacing:.065em;text-transform:uppercase}
+.handbook-entry h4,.guide-stop h4{margin:0 0 7px;color:#123f5e;font-size:18px;line-height:1.25}
+.handbook-entry-copy p{margin:0 0 9px;max-width:84ch;line-height:1.53}
+.handbook-entry-copy p:last-child{margin-bottom:0}
+.handbook-entry-meta{margin:10px 0 0;color:#64776d;font-size:12px;line-height:1.45}
+.handbook-entry-meta .under{font-size:inherit}
+.handbook-entry-detail{margin-top:11px;padding-top:10px;border-top:1px solid #cfe0e8}
+.handbook-entry-detail summary{cursor:pointer;color:#0e6387;font-size:13px;font-weight:740}
+.handbook-entry-detail[open] summary{margin-bottom:10px}
+.handbook-evidence{margin-top:18px;padding:12px 14px;border:1px solid #c9dbe4;border-radius:12px;background:#fbfdfe}
+.handbook-evidence summary{cursor:pointer;color:#155f7e;font-weight:760}
+.handbook-evidence[open] summary{margin-bottom:12px}
+.handbook-evidence .handbook-entry{background:#fff;border-left-color:#a8cad6}
+.handbook-more-notes{border-left:3px solid #6ba9bd}
+.handbook-place-part{margin-top:38px}
+.handbook-place-part .handbook-part-head{border-radius:13px 13px 0 0}
+.handbook-place-part .handbook-subsection{padding:22px 0;border-bottom:1px solid var(--line)}
+.handbook-place-part .handbook-subsection:last-child{border-bottom:0}
+.handbook-questions{margin-top:34px}
+.handbook-questions h2{margin:4px 0 14px;color:#173f2e}
+@media(max-width:850px){.handbook-quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.handbook-topic-head{align-items:start;flex-direction:column}.handbook-topic-head .meta{white-space:normal}.handbook-quick,.handbook-part,.handbook-topic{scroll-margin-top:150px}}
+@media(max-width:520px){.handbook-quick-grid{grid-template-columns:1fr}.handbook-part-head{margin-left:-2px;margin-right:-2px;padding:14px}.handbook-part-head h2{font-size:24px}.handbook-topic-head h3{font-size:23px}.handbook-entry{padding:14px}.handbook-topic-links{display:grid;grid-template-columns:1fr}.handbook-topic-links a{justify-content:space-between}}
+
+/* Reading-first guide refinement: the topic rail remains, but each topic now
+   reads as field notes with a single optional full-record layer. */
+.handbook-quick{padding:0 0 25px}.handbook-quick-head h2{font-size:31px}.handbook-topic{padding:31px 0}.handbook-topic-head{align-items:flex-start;margin:0 0 17px}.handbook-topic-head>div{max-width:76ch}.handbook-topic-head h2{margin:0;color:#123f5e;font-family:Georgia,serif;font-size:29px;line-height:1.1}.handbook-topic-head>.meta{padding-top:5px;color:#58758a;font-size:12px;white-space:nowrap}.handbook-topic-intro{margin:8px 0 0;max-width:70ch;color:#5d7789;font-size:15px;line-height:1.5}.handbook-reading,.handbook-record-list{display:grid;gap:0;max-width:82ch}.handbook-note{padding:0 0 16px;background:transparent;border:0}.handbook-note+.handbook-note{padding-top:16px;border-top:1px solid #d8e5eb}.handbook-note-title{margin:0 0 5px;color:#163f5c;font-size:16px;font-weight:790;line-height:1.32}.handbook-note-copy p{margin:0 0 8px;color:#1d3444;line-height:1.6}.handbook-note-copy p:last-child{margin-bottom:0}.handbook-note-meta{margin:9px 0 0;color:#698090;font-size:12px;line-height:1.4}.handbook-records{max-width:82ch;margin:4px 0 0;padding:0;border:0;border-top:1px solid #cfdee6;border-radius:0;background:transparent}.handbook-records summary{padding:14px 0 2px;cursor:pointer;color:#176786;font-size:13px;font-weight:800;list-style:none}.handbook-records summary::-webkit-details-marker{display:none}.handbook-records summary::before{content:'+';display:inline-grid;place-items:center;width:18px;height:18px;margin-right:7px;border-radius:50%;background:#e7f3f8;color:#0e6389;font-size:17px;line-height:1;vertical-align:-1px}.handbook-records[open] summary::before{content:'–'}.handbook-records[open] summary{margin-bottom:13px}.handbook-record-list{padding:3px 0 2px}.handbook-record-list .handbook-note{padding-left:14px}.handbook-record-list .handbook-note+.handbook-note{padding-top:16px}.handbook-map-cue{max-width:82ch;margin:15px 0 0;color:#5f7889;font-size:13px;line-height:1.5}.handbook-place{margin-top:34px;padding-top:30px;border-top:2px solid #b8d5e1;scroll-margin-top:132px}.handbook-country-links{display:flex;align-items:flex-start;gap:12px;margin:20px 0;flex-wrap:wrap}.handbook-country-links>span{padding-top:9px;color:#5a768a;font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase}.handbook-country-links .grid{flex:1 1 440px;margin:0}.handbook-segments{margin:18px 0}.handbook-segments .segments{margin:15px 0 3px}.handbook-stops-head{display:flex;align-items:baseline;justify-content:space-between;gap:18px;margin:21px 0 12px;color:#567489;font-size:13px;font-weight:760}.handbook-stops-grid{margin-top:0}.handbook-questions{margin-top:34px;padding-top:28px;border-top:1px solid #d8e5eb}
+@media(max-width:850px){.handbook-topic-head{gap:7px}.handbook-topic-head>.meta{padding:0;white-space:normal}.handbook-place{scroll-margin-top:150px}}
+@media(max-width:520px){.handbook-topic{padding:26px 0}.handbook-topic-head h2{font-size:25px}.handbook-quick-head h2{font-size:27px}.handbook-stops-head{align-items:flex-start;flex-direction:column;gap:5px}.handbook-country-links{display:block}.handbook-country-links>span{display:block;margin-bottom:10px}.handbook-country-links .grid{display:grid}.handbook-record-list .handbook-note{padding-left:0}}

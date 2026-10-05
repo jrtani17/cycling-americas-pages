@@ -1,0 +1,11 @@
+/* Shared country and ride chapters */
+.guide-empty{margin:0;padding:14px 15px;border:1px dashed #c5d2ca;border-radius:11px;background:#fbfcf9;color:#66756c;font-size:14px}
+.field-record-label{margin:0 0 5px;color:#2b664e;font-size:14px;line-height:1.3}
+.guide-topic-stops{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.guide-stop{display:block;padding:14px 15px;border:1px solid #cfdbd2;border-radius:12px;background:#fbfdf9;transition:border-color .15s ease,box-shadow .15s ease}
+.guide-stop:hover{border-color:#7ea88d;box-shadow:0 8px 18px rgba(24,49,36,.07)}
+.guide-stop h3{margin:8px 0 4px;font-size:17px;line-height:1.22}
+.guide-stop p{margin:5px 0 0;color:#42544a;font-size:14px;line-height:1.45}
+.guide-units-more{margin-top:12px}
+.guide-aside-note{margin:14px 0!important;padding:10px 11px;border-left:3px solid #d19b3c;background:#fff7e7;color:#655026;font-size:13px;line-height:1.45}
+@media(max-width:650px){.guide-topic-stops{grid-template-columns:1fr}}

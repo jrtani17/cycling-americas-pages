@@ -1,0 +1,59 @@
+{
+  "source": "Wikimedia Commons",
+  "photos": [
+    {
+      "route_slug": "carretera-austral",
+      "file": "carretera-austral.jpg",
+      "title": "Carretera Austral - Cerro Castillo",
+      "author": "Rodolfo Castro Reyes",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Carretera_Austral_-_Cerro_Castillo.jpg"
+    },
+    {
+      "route_slug": "peru-great-divide",
+      "file": "peru-great-divide.jpg",
+      "title": "Near Punta Union, Cordillera Blanca, Peru",
+      "author": "TMbux",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Near_Punta_Union,_Santa_Cruz_Track,_Cordillera_Blanca,_Peru_-_panoramio.jpg"
+    },
+    {
+      "route_slug": "trans-ecuador-mountain-bike-route-tembr",
+      "file": "trans-ecuador.jpg",
+      "title": "Road to Quilotoa, Ecuador",
+      "author": "Arabsalam",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Road_to_Quilotoa_Ecuador_1611.jpg"
+    },
+    {
+      "route_slug": "lagunas-lipez-route",
+      "file": "lagunas-lipez.jpg",
+      "title": "Laguna Colorada, Bolivia",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Laguna_Colorada,_Bolivia,_2016-02-02,_DD_71-73_PAN.JPG"
+    },
+    {
+      "route_slug": "oh-boyaca-bikepacking-route",
+      "file": "oh-boyaca.jpg",
+      "title": "Páramo Ocetá, Boyacá",
+      "author": "Mario Andres Izquierdo Yañez UNAL",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Paisaje_de_p%C3%A1ramo_con_neblina,_P%C3%A1ramo_Ocet%C3%A1,_Boyac%C3%A1.jpg"
+    },
+    {
+      "route_slug": "ruta-40",
+      "file": "ruta-40.jpg",
+      "title": "Ruta 40 between Bariloche and Esquel",
+      "author": "ElGuruCesar",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ruta_40_entre_Bariloche_y_Esquel_2022_3.jpg"
+    }
+  ]
+}
