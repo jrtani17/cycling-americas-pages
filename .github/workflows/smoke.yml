@@ -1,0 +1,65 @@
+name: Smoke test public site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .smoke-trigger
+      - .github/workflows/smoke.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Pages, API, CORS, and Ask
+        shell: bash
+        run: |
+          set -euo pipefail
+          SITE="https://jrtani17.github.io/cycling-americas-pages"
+          API="https://cycling-americas-web-production.up.railway.app"
+
+          curl --retry 5 --retry-delay 2 -fsSL "$SITE/" -o /tmp/home.html
+          grep -q "Cycling Americas" /tmp/home.html
+
+          curl --retry 5 --retry-delay 2 -fsSL "$SITE/pages-runtime.js" -o /tmp/runtime.js
+          grep -q "cycling-americas-pages" /tmp/runtime.js
+          grep -q "cycling-americas-web-production.up.railway.app" /tmp/runtime.js
+
+          # GitHub Pages serves SPA deep links through the custom 404 document.
+          code="$(curl --retry 5 --retry-delay 2 -sSL -o /tmp/field.html -w '%{http_code}' "$SITE/field-intelligence")"
+          test "$code" = "200" || test "$code" = "404"
+          grep -q "Cycling Americas" /tmp/field.html
+
+          curl --retry 5 --retry-delay 2 -fsSL "$API/api/health" -o /tmp/health.json
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/health.json'))
+          assert d.get('ok') is True, d
+          assert d.get('databases',{}).get('web') == 'ok', d
+          assert d.get('databases',{}).get('agent') == 'ok', d
+          PY
+
+          curl --retry 5 --retry-delay 2 -fsSL "$API/api/poi-leads/summary" -o /tmp/poi.json
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/poi.json'))
+          assert int(d.get('records') or 0) > 9000, d
+          assert int(d.get('total_observations') or 0) > 9000, d
+          PY
+
+          curl --retry 5 --retry-delay 2 -sS -D /tmp/cors.headers -o /dev/null             -H 'Origin: https://jrtani17.github.io' "$API/api/health"
+          grep -Eiq '^access-control-allow-origin: https://jrtani17.github.io' /tmp/cors.headers
+
+          curl --retry 3 --retry-delay 2 -fsSL             -H 'Origin: https://jrtani17.github.io'             -H 'Content-Type: application/json'             --data '{"question":"What does the public data say about camping on the Carretera Austral?"}'             "$API/api/ask" -o /tmp/ask.json
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/ask.json'))
+          assert not d.get('error'), d
+          assert d.get('answer') or d.get('text') or d.get('response'), d
+          PY
+
+          echo "All public-site smoke checks passed."
